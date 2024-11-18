@@ -19,7 +19,6 @@ const AdminLogedHomePage = () => {
                 <AdminLogNavBar />
             </div>
 
-            {/* Main content with cards */}
             <div id="main-content">
                 <div className="card-grid">
                     {cards.slice(0, visibleCards).map((card, index) => (
@@ -30,11 +29,7 @@ const AdminLogedHomePage = () => {
                 </div>
 
                 {/* Load More Button */}
-                {visibleCards < cards.length && (
-                    <button className="load-more" onClick={loadMoreCards}>
-                        Load More
-                    </button>
-                )}
+                
             </div>
         </div>
     );

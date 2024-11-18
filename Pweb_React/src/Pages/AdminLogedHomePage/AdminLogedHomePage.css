@@ -1,8 +1,7 @@
 #container {
     display: flex;
     width: 100vw;
-    height: 100vh; /* Ocupa toda la pantalla */
-    overflow: hidden; /* Evita scroll no deseado */
+    height: 100vh; /* Para ocupar toda la altura de la pantalla */
 }
 
 #NavBar {
@@ -10,49 +9,27 @@
     height: 100%;
     position: sticky;
     top: 0;
-    background-color: #f5f5f5; /* Fondo claro */
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra para separar */
-    padding: 10px; /* Espaciado interno */
 }
 
 #main-content {
-    flex: 1;
+    flex: 1; /* Para ocupar el espacio restante */
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    background-color: #ffffff; /* Fondo blanco */
-    overflow-y: auto; /* Scroll vertical si es necesario */
+    align-items: center;
+    background-color: white;
+    overflow-y: auto; /* Permite desplazamiento vertical en caso de contenido largo */
 }
 
 .card-grid {
+    flex: 1;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espaciado entre tarjetas */
-    justify-content: center; /* Centra las tarjetas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center;
 }
 
 .card-container {
     flex: 1 1 calc(33.333% - 20px); /* Cada tarjeta ocupa un tercio del ancho */
-    max-width: calc(33.333% - 20px); /* Limita el ancho */
     box-sizing: border-box;
-    background-color: #eaeaea; /* Fondo para las tarjetas */
-    padding: 10px; /* Espaciado interno */
-    border-radius: 8px; /* Esquinas redondeadas */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
-.load-more {
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-}
-
-.load-more:hover {
-    background-color: #0056b3;
+    max-width: calc(33.333% - 20px);
 }
